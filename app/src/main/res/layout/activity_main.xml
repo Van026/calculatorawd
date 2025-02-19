@@ -1,0 +1,108 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="#FFA500"> <!-- Orange Theme -->
+
+    <!-- Logo -->
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/calculator_logo1" />
+
+    <!-- Input 1 -->
+    <EditText
+        android:id="@+id/edtNumber1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgLogo"
+        android:layout_marginTop="20dp"
+        android:hint="Enter First Number"
+        android:inputType="numberDecimal" />
+
+    <!-- Input 2 -->
+    <EditText
+        android:id="@+id/edtNumber2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edtNumber1"
+        android:layout_marginTop="10dp"
+        android:hint="Enter Second Number"
+        android:inputType="numberDecimal" />
+
+    <!-- Button Layout -->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edtNumber2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp">
+
+        <!-- Addition Button -->
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="+"
+            android:layout_alignParentLeft="true"/>
+
+        <!-- Subtraction Button -->
+        <Button
+            android:id="@+id/btnSub"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="-"
+            android:layout_toRightOf="@id/btnAdd"/>
+
+        <!-- Multiplication Button -->
+        <Button
+            android:id="@+id/btnMul"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="×"
+            android:layout_toRightOf="@id/btnSub"/>
+
+        <!-- Division Button -->
+        <Button
+            android:id="@+id/btnDiv"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="÷"
+            android:layout_below="@id/btnAdd"
+            android:layout_alignStart="@id/btnAdd"/>
+
+        <!-- Square Root Button -->
+        <Button
+            android:id="@+id/btnSqrt"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="√"
+            android:layout_below="@id/btnSub"
+            android:layout_alignLeft="@id/btnSub"/>
+
+        <!-- Reset Button -->
+        <Button
+            android:id="@+id/btnReset"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="RESET"
+            android:layout_below="@id/btnMul"
+            android:layout_alignLeft="@id/btnMul"/>
+
+        <TextView
+            android:id="@+id/txtResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnReset"
+            android:layout_centerHorizontal="true"
+            android:text="Result"
+            android:textSize="20sp"
+            android:textColor="#000"
+            android:layout_marginTop="20dp"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
